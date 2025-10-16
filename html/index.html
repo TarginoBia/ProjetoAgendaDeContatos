@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda de Contatos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Agenda de Contatos</h1>
+
+  <div class="form-container">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" placeholder="Digite o nome do contato" title="Nome do contato">
+
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco" placeholder="Digite o endereço" title="Endereço do contato">
+
+    <label>Tipo de moradia:</label>
+    <label><input type="radio" name="moradia" value="Casa" checked title="Casa"> Casa</label>
+    <label><input type="radio" name="moradia" value="Apartamento" title="Apartamento"> Apartamento</label>
+
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" placeholder="(DDD) número" title="Telefone de contato">
+
+    <label>Linguagens Preferidas:</label>
+    <div class="linguagens">
+      <label><input type="checkbox" value="C" title="Linguagem C"> C</label>
+      <label><input type="checkbox" value="C#" title="Linguagem C#"> C#</label>
+      <label><input type="checkbox" value="Java" title="Linguagem Java"> Java</label>
+      <label><input type="checkbox" value="PHP" title="Linguagem PHP"> PHP</label>
+      <label><input type="checkbox" value="Python" title="Linguagem Python"> Python</label>
+    </div>
+
+    <label for="observacao">Observação:</label>
+    <textarea id="observacao" placeholder="Digite alguma observação" title="Observações do contato"></textarea>
+
+    <button id="adicionar" title="Adicionar contato">Adicionar</button>
+  </div>
+
+  <table id="tabela-contatos">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Endereço</th>
+        <th>Tipo de moradia</th>
+        <th>Telefone</th>
+        <th>Linguagens Preferidas</th>
+        <th>Observação</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="agenda.js"></script>
+</body>
+</html>
