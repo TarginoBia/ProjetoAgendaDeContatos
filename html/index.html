@@ -1,58 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agenda de Contatos</title>
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <h1>Agenda de Contatos</h1>
+  <header>
+    <h1>Agenda de Contatos</h1>
+  </header>
 
-  <div class="form-container">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" placeholder="Digite o nome do contato" title="Nome do contato">
+  <main>
+    <section id="formulário">
+      <h2>Adicionar Contato</h2>
 
-    <label for="endereco">Endereço:</label>
-    <input type="text" id="endereco" placeholder="Digite o endereço" title="Endereço do contato">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
 
-    <label>Tipo de moradia:</label>
-    <label><input type="radio" name="moradia" value="Casa" checked title="Casa"> Casa</label>
-    <label><input type="radio" name="moradia" value="Apartamento" title="Apartamento"> Apartamento</label>
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-    <label for="telefone">Telefone:</label>
-    <input type="text" id="telefone" placeholder="(DDD) número" title="Telefone de contato">
+      <label for="endereço">Endereço:</label>
+      <input type="text" id="endereço" name="endereço" required>
 
-    <label>Linguagens Preferidas:</label>
-    <div class="linguagens">
-      <label><input type="checkbox" value="C" title="Linguagem C"> C</label>
-      <label><input type="checkbox" value="C#" title="Linguagem C#"> C#</label>
-      <label><input type="checkbox" value="Java" title="Linguagem Java"> Java</label>
-      <label><input type="checkbox" value="PHP" title="Linguagem PHP"> PHP</label>
-      <label><input type="checkbox" value="Python" title="Linguagem Python"> Python</label>
-    </div>
+      <label for="tipo de moradia">Tipo de Moradia:</label>
+      <label><input type="radio" name="moradia" value="Casa"> Casa</label>
+      <label><input type="radio" name="moradia" value="Apartamento"> Apartamento</label>
 
-    <label for="observacao">Observação:</label>
-    <textarea id="observacao" placeholder="Digite alguma observação" title="Observações do contato"></textarea>
+      <label for="linguagens preferidas">Linguagens Preferidas:</label>
+      <label><input type="checkbox" class="linguagens" value="JavaScript"> JavaScript</label>
+      <label><input type="checkbox" class="linguagens" value="Python"> Python</label>
+      <label><input type="checkbox" class="linguagens" value="Java"> Java</label>
 
-    <button id="adicionar" title="Adicionar contato">Adicionar</button>
-  </div>
+      <label for="observacao">Observação:</label>
+      <textarea id="observacao" placeholder="Observações..."></textarea>
 
-  <table id="tabela-contatos">
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Endereço</th>
-        <th>Tipo de moradia</th>
-        <th>Telefone</th>
-        <th>Linguagens Preferidas</th>
-        <th>Observação</th>
-        <th>Ação</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+      <button id="adicionar">Adicionar Contato</button>
+    </section>
 
-  <script src="agenda.js"></script>
+    <section id="lista-contatos">
+      <h2>Lista de Contatos</h2>
+      <table id="tabela contatos">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Email</th>
+            <th>Endereço</th>
+            <th>Tipo de Moradia</th>
+            <th>Linguagens Preferidas</th>
+            <th>Observação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Contatos serão adicionados aqui -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../javascript/agenda.js"></script>
 </body>
 </html>
